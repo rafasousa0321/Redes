@@ -1,0 +1,30 @@
+<?php
+    $a = 23;
+    $b = 45;
+    $soma = $a + $b;
+    $nota1 = 17;
+    $nota2 = 13;
+    $nota3 = 15;
+    $media = ($nota1 + $nota2 + $nota3) / 3;
+    $x = 17;
+    $y = 21;
+    $resto = ($x % $y) / $y;
+    $divisao = round($x / $y);
+    $preco = 78;
+    $iva = 0.23;
+    $valoriva = $preco * $iva;
+    $compra = $preco + $valoriva;
+    echo "A soma é: $soma";
+    echo "<br>";
+    echo "<br>";
+    echo "A media é: $media";
+    echo "<br>";
+    echo "<br>";
+    echo "O quociente é: $divisao";
+    echo "<br>";
+    echo "<br>";
+    echo "O resto é: $resto" ;
+    echo "<br>";
+    echo "<br>";
+    echo "O preço com iva é: $compra";
+?>
