@@ -1,5 +1,4 @@
-<?php    
-
+<?php
     $num = $_POST["n"];
 
     if($num < 0){
@@ -9,5 +8,4 @@
     }else{
         echo "ERRO";
     }
-
 ?>
