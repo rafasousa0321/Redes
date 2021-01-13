@@ -1,13 +1,13 @@
 <?php
     if($_SERVER['REQUEST_METHOD']=="GET"){
-        if(!isset($_GET['filme']) || !is_numeric($GET['filme'])){
+        if(!isset($_GET['filme']) || !is_numeric($_GET['filme'])){
             echo '<script>alert("Erro ao abrir livro");</script>';
             echo 'Aguarde um momento. A reencaminhar página';
             header("refresh:5; url=index.php");
             exit();
         }
         $idFilme=$_GET['filme'];
-        $con=new mysqli("localhost", "root", "filmes");
+        $con=new mysqli("localhost", "root", "" ,"filmes");
         if($con->connect_error!=0){
             echo 'Ocorreu um erro no acesso à base de dados. <br>' .$con->connect_error;
             exit;
@@ -59,5 +59,6 @@
                     echo '<h2>Parece que o filme selecionado não exite. <br>Confirme a sua seleção.</h2>';
                 }
             ?>
+            <a href="filmes_edit.php">Editar Filme</a>
         </body>
     </html>

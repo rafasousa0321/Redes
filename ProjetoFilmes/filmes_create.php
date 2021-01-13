@@ -23,7 +23,7 @@
         if(isset($_POST['data_lancamento'])){
             $data_lancamento = $_POST['data_lancamento'];
         }
-        $con=new mysqli("localhost", "root", "filmes");
+        $con=new mysqli("localhost", "root", "", "filmes");
         if($con->connect_error!=0){
             echo "Ocorreu um erro no acesso à base de dados. <br>" .$con->connect_error;
             exit;
@@ -35,7 +35,7 @@
                 $stm->bind_param('sssis', $titulo, $sinopse, $idioma, $quantidade, $data_lancamento);
                 $stm->execute();
                 $stm->close();
-                echo '<script>alert("Livro adicionado com sucesso");</script>';
+                echo '<script>alert("Filme adicionado com sucesso");</script>';
                 echo 'Aguarde um momento. A reencaminhar página';
                 header("refresh:5; url=index.php");
             }

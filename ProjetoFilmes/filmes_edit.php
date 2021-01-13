@@ -37,7 +37,7 @@
     <?php
         }
         else{
-            echo ('<h1>Houve um erro ao processar o seu pedido.<br> Dentro de segundos será reencaminhado!</h1>');
+            echo ('<h1>Ocorreu um erro ao processar o seu pedido.<br> Dentro de segundos será reencaminhado!</h1>');
             header("refresh:5; url=index.php");
         } 
     } 

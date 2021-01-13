@@ -26,6 +26,8 @@
                 }
                 $stm->close();
             ?>
+            <br>
+            <a href="filmes_create.php">Novo Filme</a>
         <br>
         </body>
         </html>
