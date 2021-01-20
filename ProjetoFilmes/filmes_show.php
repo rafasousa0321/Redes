@@ -60,5 +60,6 @@
                 }
             ?>
             <a href="filmes_edit.php">Editar Filme</a>
+            <a href="filmes_delete.php">Eliminar Filme</a>
         </body>
     </html>
