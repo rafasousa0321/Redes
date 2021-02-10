@@ -42,24 +42,25 @@
         <body>
             <h1>Detalhes do Filme</h1>
             <?php
-                if (isset($livro)){
+                if (isset($filme)){
                     echo '<br>';
-                    echo $livro['titulo'];
+                    echo $filme['titulo'];
                     echo '<br>';
-                    echo $livro['sinopse'];
+                    echo $filme['sinopse'];
                     echo '<br>';
-                    echo $livro['idioma'];
+                    echo $filme['idioma'];
                     echo '<br>';
-                    echo $livro['quantidade'];
+                    echo $filme['quantidade'];
                     echo '<br>';
-                    echo $livro['data_lancamento'];
+                    echo $filme['data_lancamento'];
                     echo '<br>';
+                    echo '<a href="filmes_edit.php?filme='.$filme['id_filme'].'">Editar Filme</a>';
+                    echo '<a href="filmes_delete.php?filme='.$filme['id_filme'].'">Eliminar Filme</a>';
                 }
                 else{
                     echo '<h2>Parece que o filme selecionado não exite. <br>Confirme a sua seleção.</h2>';
                 }
             ?>
-            <a href="filmes_edit.php">Editar Filme</a>
-            <a href="filmes_delete.php">Eliminar Filme</a>
+            
         </body>
     </html>

@@ -28,6 +28,7 @@
             ?>
             <br>
             <a href="filmes_create.php">Novo Filme</a>
+            <a href="login.php">Login</a>
         <br>
         </body>
         </html>

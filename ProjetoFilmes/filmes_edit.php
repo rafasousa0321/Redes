@@ -24,12 +24,12 @@
             </head>
             <body>
                 <h1>Editar filme</h1>
-                <form action="filmes_create.php" method="post">
-                    <label>Titulo</label><input type="text" name="titulo" required value="<?php echo $livro['titulo'];?>"><br>
-                    <label>Sínopse</label><input type="text" name="sinopse"  value="<?php echo $livro['sinopse'];?>"><br>
-                    <label>Quantidade</label><input type="text" name="quantidade"  value="<?php echo $livro['quantidade'];?>"><br>
-                    <label>Idioma</label><input type="text" name="idioma"  value="<?php echo $livro['idioma'];?>"><br>
-                    <label>Data de Lançamento</label><input type="text" name="data_lancamento"  value="<?php echo $livro['data_lancamento'];?>"><br>
+                <form action="filmes_update.php?filme=<?php echo $filme['id_filme'];?>" method="post">
+                    <label>Titulo</label><input type="text" name="titulo" required value="<?php echo $filme['titulo'];?>"><br>
+                    <label>Sínopse</label><input type="text" name="sinopse"  value="<?php echo $filme['sinopse'];?>"><br>
+                    <label>Quantidade</label><input type="text" name="quantidade"  value="<?php echo $filme['quantidade'];?>"><br>
+                    <label>Idioma</label><input type="text" name="idioma"  value="<?php echo $filme['idioma'];?>"><br>
+                    <label>Data de Lançamento</label><input type="text" name="data_lancamento"  value="<?php echo $filme['data_lancamento'];?>"><br>
                     <input type="submit" name="enviar"><br>
                 </form>
             </body>
