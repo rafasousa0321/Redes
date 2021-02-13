@@ -28,7 +28,10 @@
             ?>
             <br>
             <a href="filmes_create.php">Novo Filme</a>
+            <br>
             <a href="login.php">Login</a>
+            <br>
+            <a href="listar_users.php">Lista de Utilizadores</a>
         <br>
         </body>
         </html>
