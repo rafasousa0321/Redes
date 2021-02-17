@@ -19,7 +19,7 @@
                 $stm->bind_param('i', $idFilme);
                 $stm->execute();
                 $res=$stm->get_result();
-                $livro = $res->fetch_assoc();
+                $filme = $res->fetch_assoc();
                 $stm->close();
             }
             else{
@@ -56,11 +56,12 @@
                     echo '<br>';
                     echo '<a href="filmes_edit.php?filme='.$filme['id_filme'].'">Editar Filme</a>';
                     echo '<a href="filmes_delete.php?filme='.$filme['id_filme'].'">Eliminar Filme</a>';
+                    echo '<br>';
+                    echo '<a href="index.php">Voltar</a>';
                 }
                 else{
                     echo '<h2>Parece que o filme selecionado não exite. <br>Confirme a sua seleção.</h2>';
                 }
             ?>
-            
         </body>
     </html>
