@@ -26,12 +26,28 @@
                 }
                 $stm->close();
             ?>
+            <h1>Lista de Atores</h1>
+            <?php
+                $stm = $con->prepare('select * from atores');
+                $stm->execute();
+                $res = $stm->get_result();
+                while($resultado = $res->fetch_assoc()){
+                    echo '<a href="atores_show.php?ator=' .$resultado['id_ator'].'">';
+                    echo $resultado['nome'];
+                    echo '</a>';
+                    echo '<br>';
+                }
+                $stm->close();
+            ?>
+            <br>
             <br>
             <a href="filmes_create.php">Novo Filme</a>
             <br>
-            <a href="login.php">Login</a>
+            <a href="atores_create.php">Novo Ator</a>
             <br>
             <a href="listar_users.php">Lista de Utilizadores</a>
+            <br>
+            <a href="login.php">Login</a>
         <br>
         </body>
         </html>

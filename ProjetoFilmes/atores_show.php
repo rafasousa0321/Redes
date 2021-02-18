@@ -1,25 +1,25 @@
 <?php
     if($_SERVER['REQUEST_METHOD']=="GET"){
-        if(!isset($_GET['filme']) || !is_numeric($_GET['filme'])){
+        if(!isset($_GET['ator']) || !is_numeric($_GET['ator'])){
             echo '<script>alert("Erro ao abrir livro");</script>';
             echo 'Aguarde um momento. A reencaminhar página';
             header("refresh:5; url=index.php");
             exit();
         }
-        $idFilme=$_GET['filme'];
+        $idAtor=$_GET['ator'];
         $con=new mysqli("localhost", "root", "" ,"filmes");
         if($con->connect_error!=0){
             echo 'Ocorreu um erro no acesso à base de dados. <br>' .$con->connect_error;
             exit;
         }
         else{
-            $sql = 'select * from filmes where id_filme = ?';
-            $stm = $con->prepare ( $sql);
+            $sql = 'select * from atores where id_ator = ?';
+            $stm = $con->prepare ($sql);
             if($stm!=false){
-                $stm->bind_param('i', $idFilme);
+                $stm->bind_param('i', $idAtor);
                 $stm->execute();
                 $res=$stm->get_result();
-                $filme = $res->fetch_assoc();
+                $atores = $res->fetch_assoc();
                 $stm->close();
             }
             else{
@@ -40,28 +40,27 @@
             <title>Detalhes</title>
         </head>
         <body>
-            <h1>Detalhes do Filme</h1>
+            <h1>Detalhes do Ator</h1>
             <?php
-                if (isset($filme)){
+                if (isset($atores)){
                     echo '<br>';
-                    echo $filme['titulo'];
+                    echo $atores['id_ator'];
                     echo '<br>';
-                    echo $filme['sinopse'];
+                    echo $atores['nome'];
                     echo '<br>';
-                    echo $filme['idioma'];
+                    echo $atores['data_nascimento'];
                     echo '<br>';
-                    echo $filme['quantidade'];
+                    echo $atores['nacionalidade'];
                     echo '<br>';
-                    echo $filme['data_lancamento'];
                     echo '<br>';
-                    echo '<a href="filmes_edit.php?filme='.$filme['id_filme'].'">Editar Filme</a>';
+                    echo '<a href="atores_edit.php?ator='.$atores['id_ator'].'">Editar Ator</a>';
                     echo '<br>';
-                    echo '<a href="filmes_delete.php?filme='.$filme['id_filme'].'">Eliminar Filme</a>';
+                    echo '<a href="atores_delete.php?ator='.$atores['id_ator'].'">Eliminar Ator</a>';
                     echo '<br>';
                     echo '<a href="index.php">Voltar</a>';
                 }
                 else{
-                    echo '<h2>Parece que o filme selecionado não exite. <br>Confirme a sua seleção.</h2>';
+                    echo '<h2>Parece que o ator selecionado não exite. <br>Confirme a sua seleção.</h2>';
                 }
             ?>
         </body>
