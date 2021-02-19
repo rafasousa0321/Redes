@@ -39,11 +39,26 @@
                 }
                 $stm->close();
             ?>
+            <h1>Lista de Realizadores</h1>
+                <?php
+                $stm = $con->prepare('select * from realizadores');
+                $stm->execute();
+                $res=$stm->get_result();
+                while($resultado = $res->fetch_assoc()){
+                echo '<a href="realizadores_show.php?realizador='.$resultado['id_realizador'].'">';
+                echo $resultado['nome'];
+                echo '</a>';
+                echo '<br>';
+            }
+            $stm->close();
+            ?>
             <br>
             <br>
             <a href="filmes_create.php">Novo Filme</a>
             <br>
             <a href="atores_create.php">Novo Ator</a>
+            <br>
+            <a href="realizadores_create.php">Novo Realizador</a>
             <br>
             <a href="listar_users.php">Lista de Utilizadores</a>
             <br>
