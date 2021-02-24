@@ -39,7 +39,7 @@
             <meta charset="ISO-8859-1">
             <title>Detalhes</title>
         </head>
-        <body>
+        <body style="background-color: #d9d9d9">
             <h1>Detalhes do Realizador</h1>
             <?php
                 if (isset($realizadores)){
@@ -53,11 +53,11 @@
                     echo $realizadores['nacionalidade'];
                     echo '<br>';
                     echo '<br>';
-                    echo '<a href="realizadores_edit.php?realizador='.$realizadores['id_realizador'].'">Editar Realizador</a>';
+                    echo '<button><a href="realizadores_edit.php?realizador='.$realizadores['id_realizador'].'">Editar Realizador</a></button>';
                     echo '<br>';
-                    echo '<a href="realizadores_delete.php?realizador='.$realizadores['id_realizador'].'">Eliminar Realizador</a>';
+                    echo '<button><a href="realizadores_delete.php?realizador='.$realizadores['id_realizador'].'">Eliminar Realizador</a></button>';
                     echo '<br>';
-                    echo '<a href="index.php">Voltar</a>';
+                    echo '<button><a href="index.php">Voltar</a></button>';
                 }
                 else{
                     echo '<h2>Parece que o realizador selecionado não exite. <br>Confirme a sua seleção.</h2>';

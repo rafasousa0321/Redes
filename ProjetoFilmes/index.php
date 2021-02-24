@@ -12,7 +12,7 @@
             <meta charset="ISO-8859-1">
             <title>filmes</title>
         </head>
-        <body>
+        <body style="background-color: #d9d9d9">
             <h1>Lista de filmes</h1>
             <?php
                 $stm = $con->prepare('select * from filmes');
@@ -54,15 +54,15 @@
             ?>
             <br>
             <br>
-            <a href="filmes_create.php">Novo Filme</a>
+            <button><a href="filmes_create.php">Novo Filme</a></button>
             <br>
-            <a href="atores_create.php">Novo Ator</a>
+            <button><a href="atores_create.php">Novo Ator</a></button>
             <br>
-            <a href="realizadores_create.php">Novo Realizador</a>
+            <button><a href="realizadores_create.php">Novo Realizador</a></button>
             <br>
-            <a href="listar_users.php">Lista de Utilizadores</a>
+            <button><a href="listar_users.php">Lista de Utilizadores</a></button>
             <br>
-            <a href="login.php">Login</a>
+            <button><a href="login.php">Login</a></button>
         <br>
         </body>
         </html>

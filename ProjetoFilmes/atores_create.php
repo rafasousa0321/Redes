@@ -1,3 +1,6 @@
+<html>
+<body style="background-color: #d9d9d9">
+</html>
 <?php
     if($_SERVER['REQUEST_METHOD']=="POST"){
         $nome="";

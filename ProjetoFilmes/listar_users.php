@@ -1,3 +1,6 @@
+<html>
+<body style="background-color: #d9d9d9">
+</html>
 <?php
     $con = new mysqli("localhost","root","","filmes");
     if($con->connect_errno!=0){

@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
     <meta charset="ISO-8859-1">
     <title>Editar filme</title>
 </head>
-<body>
+<body style="background-color: #d9d9d9">
     <h1>Editar filmes</h1>
     <form action="filmes_update.php?filme=<?php echo $livro['id_filme']; ?>" method="post">
         <label>Titulo</label><input type="text" name="titulo" required value="<?php echo $livro['titulo'];?>"><br>

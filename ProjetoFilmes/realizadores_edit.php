@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
     <meta charset="ISO-8859-1">
     <title>Editar Realizador</title>
 </head>
-<body>
+<body style="background-color: #d9d9d9">
     <h1>Editar Realizador</h1>
     <form action="realizadores_update.php?realizador=<?php echo $realizador['id_realizador']; ?>" method="post">
         <label>Nome</label><input type="text" name="nome" required value="<?php echo $realizador['nome'];?>"><br>

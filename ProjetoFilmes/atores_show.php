@@ -39,7 +39,7 @@
             <meta charset="ISO-8859-1">
             <title>Detalhes</title>
         </head>
-        <body>
+        <body style="background-color: #d9d9d9">
             <h1>Detalhes do Ator</h1>
             <?php
                 if (isset($atores)){
@@ -53,11 +53,11 @@
                     echo $atores['nacionalidade'];
                     echo '<br>';
                     echo '<br>';
-                    echo '<a href="atores_edit.php?ator='.$atores['id_ator'].'">Editar Ator</a>';
+                    echo '<button><a href="atores_edit.php?ator='.$atores['id_ator'].'">Editar Ator</a></button>';
                     echo '<br>';
-                    echo '<a href="atores_delete.php?ator='.$atores['id_ator'].'">Eliminar Ator</a>';
+                    echo '<button><a href="atores_delete.php?ator='.$atores['id_ator'].'">Eliminar Ator</a></button>';
                     echo '<br>';
-                    echo '<a href="index.php">Voltar</a>';
+                    echo '<button><a href="index.php">Voltar</a></button>';
                 }
                 else{
                     echo '<h2>Parece que o ator selecionado não exite. <br>Confirme a sua seleção.</h2>';

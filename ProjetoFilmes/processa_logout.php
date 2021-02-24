@@ -1,3 +1,6 @@
+<html>
+<body style="background-color: #d9d9d9">
+</html>
 <?php
     session_start();
     $_SESSION['login']="incorreto";

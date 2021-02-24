@@ -4,7 +4,7 @@
         <meta charset="ISO-8859-1">
         <title>Login</title>
     </head>
-    <body>
+    <body style="background-color: #d9d9d9">
         <h1>Login</h1>
         <form method="post" action="processa_login.php">
             <label>Nome de utilizador</label><input type="text" name="user_name" required><br>

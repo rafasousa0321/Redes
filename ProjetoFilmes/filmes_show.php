@@ -39,7 +39,7 @@
             <meta charset="ISO-8859-1">
             <title>Detalhes</title>
         </head>
-        <body>
+        <body style="background-color: #d9d9d9">
             <h1>Detalhes do Filme</h1>
             <?php
                 if (isset($filme)){
@@ -54,11 +54,11 @@
                     echo '<br>';
                     echo $filme['data_lancamento'];
                     echo '<br>';
-                    echo '<a href="filmes_edit.php?filme='.$filme['id_filme'].'">Editar Filme</a>';
+                    echo '<button><a href="filmes_edit.php?filme='.$filme['id_filme'].'">Editar Filme</a></button>';
                     echo '<br>';
-                    echo '<a href="filmes_delete.php?filme='.$filme['id_filme'].'">Eliminar Filme</a>';
+                    echo '<button><a href="filmes_delete.php?filme='.$filme['id_filme'].'">Eliminar Filme</a></button>';
                     echo '<br>';
-                    echo '<a href="index.php">Voltar</a>';
+                    echo '<button><a href="index.php">Voltar</a></button>';
                 }
                 else{
                     echo '<h2>Parece que o filme selecionado não exite. <br>Confirme a sua seleção.</h2>';

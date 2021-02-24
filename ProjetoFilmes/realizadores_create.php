@@ -43,7 +43,7 @@
                 <meta charset="ISO-8859-1">
                 <title>Adicionar Realizadores</title>
             </head>
-            <body>
+            <body style="background-color: #d9d9d9">
                 <h1>Adicionar Realizadores</h1>
                 <form action="realizadores_create.php" method="post">
                     <label>Nome</label><input type="text" name="nome"><br>

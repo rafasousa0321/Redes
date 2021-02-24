@@ -54,7 +54,7 @@
                 <meta charset="ISO-8859-1">
                 <title>Adicionar filmes</title>
             </head>
-            <body>
+            <body style="background-color: #d9d9d9">
                 <h1>Adicionar filmes</h1>
                 <form action="filmes_create.php" method="post">
                     <label>Titulo</label><input type="text" name="titulo" required><br>
