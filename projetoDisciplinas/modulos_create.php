@@ -2,6 +2,7 @@
 <body style="background-color: #d9d9d9">
 </html>
 <?php
+    include "css.php";
     if($_SERVER['REQUEST_METHOD']=="POST"){
         $id_disciplina="";
         $numero="";

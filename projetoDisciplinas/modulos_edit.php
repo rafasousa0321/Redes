@@ -2,22 +2,22 @@
 include "css.php";
 if($_SERVER['REQUEST_METHOD']=="GET"){
 
-    if(isset($_GET['disciplina']) && is_numeric($_GET['disciplina'])){
-        $idDisciplina = $_GET['disciplina'];
+    if(isset($_GET['modulo']) && is_numeric($_GET['modulo'])){
+        $idModulo = $_GET['modulo'];
         $con = new mysqli("localhost","root","","disciplinas");
 
         if($con->connect_errno!=0){
             echo "<h1>Ocorreu um erro no acesso à base de dados.<br>".$con->connect_error."</h1>";
             exit();
         }
-        $sql = "Select * from disciplinas where id_disciplina=?";
+        $sql = "Select * from modulos where id_modulo=?";
         $stm = $con->prepare($sql);
 
         if($stm!=false){
-            $stm->bind_param("i",$idDisciplina);
+            $stm->bind_param("i",$idModulo);
             $stm->execute();
             $res=$stm->get_result();
-            $disciplina = $res->fetch_assoc();
+            $modulo = $res->fetch_assoc();
             $stm->close();
         }
     
@@ -26,12 +26,14 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Editar disciplina</title>
+    <title>Editar módulo</title>
 </head>
 <body style="background-color: #d9d9d9">
-    <h1>Editar disciplina</h1>
-    <form action="disciplinas_update.php?disciplina=<?php echo $disciplina['id_disciplina']; ?>" method="post">
-        <label>Disciplina</label><input type="text" name="disciplina" required value="<?php echo $disciplina['disciplina'];?>"><br>
+    <h1>Editar módulo</h1>
+    <form action="modulos_update.php?modulo=<?php echo $modulo['id_modulo']; ?>" method="post">
+        <label>ID da disciplina</label><input type="text" name="id_disciplina" required value="<?php echo $modulo['id_disciplina'];?>"><br>
+        <label>Numero</label><input type="text" name="numero" required value="<?php echo $modulo['numero'];?>"><br>
+        <label>Módulo</label><input type="text" name="modulo" required value="<?php echo $modulo['modulo'];?>"><br>
         <input type="submit" name="enviar"><br>
     </form>
 </body>

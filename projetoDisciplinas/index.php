@@ -1,4 +1,5 @@
 <?php
+    include "css.php";
     $con=new mysqli("localhost", "root", "", "disciplinas");
     if($con->connect_error!=0){
         echo "Ocorreu um erro no acesso à base de dados" .$con->connect_error;
@@ -11,6 +12,7 @@
         <head>
             <meta charset="ISO-8859-1">
             <title>Disciplinas</title>
+            
         </head>
         <body style="background-color: #d9d9d9">
             <h1>Lista de Disciplinas</h1>
@@ -44,10 +46,6 @@
             <button><a href="disciplinas_create.php">Nova Disciplina</a></button>
             <br>
             <button><a href="modulos_create.php">Novo Módulo</a></button>
-            <br>
-            <button><a href="listar_users.php">Lista de Utilizadores</a></button>
-            <br>
-            <button><a href="login.php">Login</a></button>
         <br>
         </body>
         </html>

@@ -1,4 +1,5 @@
 <?php
+    include "css.php";
     if($_SERVER['REQUEST_METHOD']=="GET"){
         if(!isset($_GET['modulo']) || !is_numeric($_GET['modulo'])){
             echo '<script>alert("Erro ao abrir modulo");</script>';

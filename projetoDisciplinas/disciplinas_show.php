@@ -1,4 +1,5 @@
 <?php
+    include "css.php";
     if($_SERVER['REQUEST_METHOD']=="GET"){
         if(!isset($_GET['disciplina']) || !is_numeric($_GET['disciplina'])){
             echo '<script>alert("Erro ao abrir disciplina");</script>';

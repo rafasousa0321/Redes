@@ -3,11 +3,19 @@
 </html>
 <?php
     include "css.php";
-    $idDisciplina=$_GET['disciplina'];
+    $idModulo=$_GET['modulo'];
     if($_SERVER['REQUEST_METHOD']=='POST'){
-        $disciplina = "";
-        if(isset($_POST['disciplina'])){
-            $disciplina = $_POST['disciplina'];
+        $id_disciplina = "";
+        $numero = "";
+        $modulo = "";
+        if(isset($_POST['id_disciplina'])){
+            $id_disciplina = $_POST['id_disciplina'];
+        }
+        if(isset($_POST['numero'])){
+            $numero = $_POST['numero'];
+        }
+        if(isset($_POST['modulo'])){
+            $modulo = $_POST['modulo'];
         }
         $con = new mysqli("localhost","root","","disciplinas");
 
@@ -16,14 +24,14 @@
             exit;
         }
         else{
-            $sql = "update disciplinas set disciplina=? where id_disciplina=?";
+            $sql = "update modulos set id_disciplina=?, numero=?, modulo=? where id_modulo=?";
 
             $stm=$con->prepare($sql);
             if($stm!=false){
-                $stm->bind_param("si",$disciplina, $idDisciplina);
+                $stm->bind_param("iisi",$id_disciplina, $numero, $modulo, $idModulo);
                 $stm->execute();
                 $stm->close();
-                echo '<script>alert("Disciplina alterada com sucesso!!");</script>';
+                echo '<script>alert("Módulo alterada com sucesso!!");</script>';
                 echo "Aguarde um momento. A reencaminhar página";
                 header("refresh:5; url=index.php");
             }
