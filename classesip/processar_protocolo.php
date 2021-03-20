@@ -1,4 +1,5 @@
 <?php 
+	include "css.php";
 	$protocolo=$_GET['protocolo'];
 	if($protocolo=="dns"){
 		echo"<h5>é o protocolo utilizado para associar a cada endereço IP um nome, pois desta forma é mais fácil de ser memorizado pelos utilizadores. Por exemplo, www.portoeditora.pt, poderá, corresponder ao endereço IP 192.16831.32.</h5>";
